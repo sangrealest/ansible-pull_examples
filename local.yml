@@ -8,7 +8,7 @@
   connection: local
   tasks:
   - name: Test pull mode
-    shell: touch /ansible-pull_mode
+    shell: touch /tmp/ansible-pull_mode
   
 #  roles:
 #    - bootstrap
