@@ -1,0 +1,15 @@
+---
+## Example for Ansible Pull
+## by Shanker
+
+  hosts: localhost
+- name: Ansible Example Pull Mode
+  user: root
+  connection: local
+  tasks:
+  - name: Test pull mode
+    shell: touch /ansible-pull_mode
+  
+#  roles:
+#    - bootstrap
+
