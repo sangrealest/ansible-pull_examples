@@ -2,8 +2,8 @@
 ## Example for Ansible Pull
 ## by Shanker
 
-  hosts: localhost
-- name: Ansible Example Pull Mode
+- hosts: localhost
+  name: Ansible Example Pull Mode
   user: root
   connection: local
   tasks:
