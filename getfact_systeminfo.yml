@@ -1,0 +1,12 @@
+- hosts: localhost
+  gather_facts: true
+  user: root
+  tasks:
+  - name: Create CSV log entry
+    set_fact:
+      csv_entry: "{{ ansible_date_time.date }} {{ ansible_fqdn }} {{ ansible_distribution }} {{ ansible_kernel }} {{ ansible_architecture }} {{ ansible_default_ipv4.address }} {{ansible_processor_cores }} cores {{ (ansible_memtotal_mb/1024)|round|int }}GB Mem uptime {{ (ansible_uptime_seconds/3600)|round|int }} H {{ ansible_mounts.0.mount }} {{ (ansible_mounts.0.size_available/1024/1024/1024)|round|int }}GB free"
+
+  - name: Show the msg
+    debug:
+      msg: "{{ csv_entry }}"
+      
